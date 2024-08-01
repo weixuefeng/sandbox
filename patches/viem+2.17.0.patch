@@ -1,0 +1,13 @@
+diff --git a/node_modules/viem/_esm/actions/wallet/sendTransaction.js b/node_modules/viem/_esm/actions/wallet/sendTransaction.js
+index f461b5e..46b8897 100644
+--- a/node_modules/viem/_esm/actions/wallet/sendTransaction.js
++++ b/node_modules/viem/_esm/actions/wallet/sendTransaction.js
+@@ -103,7 +103,7 @@ export async function sendTransaction(client, parameters) {
+         const format = chainFormat || formatTransactionRequest;
+         const request = format({
+             // Pick out extra data that might exist on the chain's transaction request type.
+-            ...extract(rest, { format: chainFormat }),
++            ...extract(rest, { format: format }),
+             accessList,
+             blobs,
+             chainId,
